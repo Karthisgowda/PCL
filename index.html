@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI-Enabled Adaptive Solar Energy Management System</title>
+    <meta
+      name="description"
+      content="10-slide HTML presentation for the IJSRED published paper on AI-enabled adaptive solar energy management for portable charging devices."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="deck" aria-live="polite">
+      <section class="slide title-slide active" data-title="Title">
+        <div class="publication-strip">IJSRED Volume 9, Issue 2 · March-April 2026 · Paper ID IJSRED-V9I2P454</div>
+        <div class="title-grid">
+          <div>
+            <p class="eyebrow">Published Research Presentation</p>
+            <h1>AI-Enabled Adaptive Solar Energy Management System</h1>
+            <p class="subtitle">A proposed system architecture for portable charging devices that combines adaptive MPPT, predictive battery management, and smart multi-device power distribution.</p>
+            <div class="author-line">
+              Karthik S Gowda · Harsh Lakhotia · Hanoch Jiji · Ibrahim Sarfaraz Mukadam
+            </div>
+            <div class="link-row">
+              <a href="https://www.ijsred.com/volume9-issue2-part46.html" target="_blank" rel="noreferrer">Published link</a>
+              <a href="https://www.ijsred.com/mar-apr-2026.html" target="_blank" rel="noreferrer">Online edition</a>
+            </div>
+          </div>
+          <div class="hero-visual" aria-label="Solar charger concept diagram">
+            <div class="sun"></div>
+            <div class="solar-panel">
+              <span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="power-bank">
+              <div class="screen">AI</div>
+              <div class="ports"><span></span><span></span><span></span></div>
+            </div>
+            <div class="energy-line"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="Problem">
+        <p class="eyebrow">1 · Problem Statement</p>
+        <h2>Portable solar charging still behaves like a fixed circuit.</h2>
+        <div class="two-column">
+          <div>
+            <p>Portable devices are essential during travel, field work, emergencies, and rural use, but conventional power banks depend on grid charging.</p>
+            <p>Solar chargers solve part of the problem, yet many still struggle when sunlight, temperature, shading, and load demand change throughout the day.</p>
+          </div>
+          <div class="fact-stack">
+            <div><strong>10-15%</strong><span>Typical basic solar power-bank conversion range cited in the draft</span></div>
+            <div><strong>8-12 hrs</strong><span>Favorable sunlight often needed for partial charging</span></div>
+            <div><strong>Core gap</strong><span>Limited intelligence, not only limited panel efficiency</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="Objective">
+        <p class="eyebrow">2 · Objective and Contribution</p>
+        <h2>A literature-grounded architecture for smarter off-grid charging.</h2>
+        <div class="card-grid">
+          <article>
+            <h3>Architecture</h3>
+            <p>Defines a unified system for adaptive solar harvesting, battery supervision, and output power control.</p>
+          </article>
+          <article>
+            <h3>Integration</h3>
+            <p>Combines AI-based MPPT, intelligent BMS, and USB-C power distribution into one portable design framework.</p>
+          </article>
+          <article>
+            <h3>Academic clarity</h3>
+            <p>Positions the work as a conceptual system design, not a claim of new algorithms or prototype results.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="slide" data-title="Literature">
+        <p class="eyebrow">3 · Literature Gap</p>
+        <h2>Traditional methods are useful, but brittle under real-world variation.</h2>
+        <div class="comparison">
+          <div>
+            <h3>Conventional MPPT</h3>
+            <p>P&O and Incremental Conductance are simple, but can settle at local maximum power points under partial shading.</p>
+          </div>
+          <div>
+            <h3>AI MPPT</h3>
+            <p>ANN and DRL approaches can map changing irradiance, temperature, voltage, and current conditions to better control decisions.</p>
+          </div>
+          <div>
+            <h3>Battery estimation</h3>
+            <p>PINN-based battery models can keep SOC and SOH predictions physically consistent under difficult operating conditions.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="Architecture">
+        <p class="eyebrow">4 · Proposed System Architecture</p>
+        <h2>Energy flows from solar input to intelligent charging decisions.</h2>
+        <div class="flow-diagram">
+          <div>PV Panel</div>
+          <span></span>
+          <div>Sensor Module</div>
+          <span></span>
+          <div>AI Controller</div>
+          <span></span>
+          <div>MPPT Converter</div>
+          <span></span>
+          <div>BMS + Battery</div>
+          <span></span>
+          <div>USB-C Outputs</div>
+        </div>
+        <p class="supporting">The AI Energy Management Controller receives environmental, electrical, and battery data, then regulates solar optimization and power distribution in a continuous feedback loop.</p>
+      </section>
+
+      <section class="slide" data-title="AI">
+        <p class="eyebrow">5 · AI-Based Energy Management</p>
+        <h2>Three intelligence layers coordinate harvesting, storage, and delivery.</h2>
+        <div class="three-panel">
+          <article>
+            <span class="badge">MPPT</span>
+            <h3>ANN first, DRL later</h3>
+            <p>ANN is recommended for first implementation due to fast, deterministic inference; DRL is reserved for future online adaptation.</p>
+          </article>
+          <article>
+            <span class="badge">BMS</span>
+            <h3>Predictive health</h3>
+            <p>PINN-based SOC/SOH estimation can support safer charging decisions and early degradation warnings.</p>
+          </article>
+          <article>
+            <span class="badge">Power</span>
+            <h3>Dynamic allocation</h3>
+            <p>USB Power Delivery negotiation allows priority-aware charging across phones, laptops, wearables, and field devices.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="slide" data-title="Operation">
+        <p class="eyebrow">6 · Operating Phases</p>
+        <h2>The system runs as a continuous adaptive loop.</h2>
+        <ol class="phase-list">
+          <li><strong>Harvest:</strong> PV panel converts sunlight into DC power.</li>
+          <li><strong>Sense:</strong> Irradiance, temperature, voltage, and current are measured.</li>
+          <li><strong>Analyze:</strong> AI estimates available energy and optimal charging parameters.</li>
+          <li><strong>Optimize:</strong> Converter duty cycle is adjusted for maximum power extraction.</li>
+          <li><strong>Charge and distribute:</strong> BMS supervises storage while USB-C outputs receive dynamically allocated power.</li>
+        </ol>
+      </section>
+
+      <section class="slide" data-title="Impact">
+        <p class="eyebrow">7 · Expected Impact</p>
+        <h2>Expected gains come from smarter control, not exaggerated claims.</h2>
+        <div class="impact-grid">
+          <div><strong>Higher energy use</strong><span>Better tracking under changing solar conditions</span></div>
+          <div><strong>Longer battery life</strong><span>Temperature-aware and health-aware charge management</span></div>
+          <div><strong>Reliable off-grid power</strong><span>Useful for travel, emergencies, field research, and rural access</span></div>
+          <div><strong>Less waste</strong><span>Battery protection can reduce premature device degradation</span></div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="Applications">
+        <p class="eyebrow">8 · Applications</p>
+        <h2>Designed for situations where wall power cannot be assumed.</h2>
+        <div class="use-cases">
+          <span>Outdoor adventure</span>
+          <span>Disaster relief</span>
+          <span>Rural electrification</span>
+          <span>Field research</span>
+          <span>Environmental monitoring</span>
+          <span>Daily commuting</span>
+        </div>
+        <p class="supporting">The same architecture can serve consumer, emergency, and professional contexts because it adapts to both energy supply and connected-device demand.</p>
+      </section>
+
+      <section class="slide" data-title="Limitations">
+        <p class="eyebrow">9 · Scope, Publication, and Next Steps</p>
+        <h2>The paper is published, but the system remains a conceptual design.</h2>
+        <div class="two-column">
+          <div>
+            <h3>Current scope</h3>
+            <p>No physical prototype, no experimental validation, no new ML algorithm claim, and no regulatory certification claim.</p>
+            <h3>Next work</h3>
+            <p>Build a prototype, train and evaluate models, test under partial shading and multi-device loads, then optimize form factor.</p>
+          </div>
+          <div class="citation-box">
+            <strong>Publication details</strong>
+            <span>International Journal of Scientific Research and Engineering Development</span>
+            <span>Volume 9, Issue 2, March-April 2026</span>
+            <span>Pages 2435-2443 · Paper ID IJSRED-V9I2P454</span>
+            <span>Copyright transfer dated 16-04-2026</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <nav class="controls" aria-label="Presentation controls">
+      <button id="prev" type="button" aria-label="Previous slide">‹</button>
+      <div class="counter"><span id="current">1</span>/<span id="total">10</span></div>
+      <button id="next" type="button" aria-label="Next slide">›</button>
+    </nav>
+    <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+    <script src="script.js"></script>
+  </body>
+</html>

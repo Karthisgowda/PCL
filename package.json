@@ -1,0 +1,10 @@
+{
+  "name": "ai-solar-research-presentation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HTML presentation for the IJSRED published AI-enabled adaptive solar energy management system paper.",
+  "scripts": {
+    "start": "npx serve .",
+    "check": "node check.js"
+  }
+}
