@@ -4,6 +4,7 @@ const total = document.querySelector("#total");
 const progress = document.querySelector("#progress");
 const prev = document.querySelector("#prev");
 const next = document.querySelector("#next");
+const fullscreen = document.querySelector("#fullscreen");
 
 let index = 0;
 total.textContent = slides.length;
@@ -22,8 +23,18 @@ function showSlide(nextIndex) {
 
 prev.addEventListener("click", () => showSlide(index - 1));
 next.addEventListener("click", () => showSlide(index + 1));
+fullscreen.addEventListener("click", async () => {
+  if (!document.fullscreenElement) {
+    await document.documentElement.requestFullscreen();
+  } else {
+    await document.exitFullscreen();
+  }
+});
 
 document.addEventListener("keydown", (event) => {
+  if (event.key.toLowerCase() === "f") {
+    fullscreen.click();
+  }
   if (event.key === "ArrowRight" || event.key === "PageDown" || event.key === " ") {
     event.preventDefault();
     showSlide(index + 1);

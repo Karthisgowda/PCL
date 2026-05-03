@@ -17,6 +17,7 @@
 
 body {
   margin: 0;
+  overflow: hidden;
   min-height: 100vh;
   background:
     radial-gradient(circle at top left, rgba(211, 157, 42, 0.2), transparent 32rem),
@@ -31,20 +32,23 @@ a {
 }
 
 .deck {
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   display: grid;
   place-items: center;
-  padding: 4.5rem 1.2rem 5.5rem;
+  padding: 0;
 }
 
 .slide {
   display: none;
-  width: min(1120px, 100%);
-  min-height: min(680px, calc(100vh - 10rem));
+  width: min(100vw, 177.7778vh);
+  height: min(56.25vw, 100vh);
+  min-height: 0;
+  aspect-ratio: 16 / 9;
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(47, 125, 88, 0.14);
   box-shadow: var(--shadow);
-  padding: clamp(1.4rem, 3vw, 3.4rem);
+  padding: clamp(1.1rem, 3.5vmin, 3rem);
   position: relative;
   overflow: hidden;
 }
@@ -68,7 +72,7 @@ a {
   border: 1px solid rgba(47, 125, 88, 0.2);
   color: #214a37;
   background: #eef6ef;
-  font-size: 0.86rem;
+  font-size: clamp(0.66rem, 1.25vmin, 0.86rem);
   font-weight: 700;
   margin-bottom: 1.4rem;
 }
@@ -99,20 +103,20 @@ p {
 
 h1 {
   max-width: 820px;
-  font-size: clamp(2.4rem, 6vw, 5.7rem);
+  font-size: clamp(2rem, 7.2vmin, 5.2rem);
   line-height: 0.96;
   margin-bottom: 1.2rem;
 }
 
 h2 {
   max-width: 900px;
-  font-size: clamp(2rem, 4.2vw, 4rem);
+  font-size: clamp(1.65rem, 5.1vmin, 3.75rem);
   line-height: 1.02;
   margin-bottom: 1.6rem;
 }
 
 h3 {
-  font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+  font-size: clamp(0.9rem, 2vmin, 1.25rem);
   margin-bottom: 0.55rem;
 }
 
@@ -122,13 +126,13 @@ li,
 .fact-stack span,
 .impact-grid span {
   color: var(--muted);
-  font-size: clamp(1rem, 1.35vw, 1.2rem);
-  line-height: 1.55;
+  font-size: clamp(0.82rem, 1.65vmin, 1.08rem);
+  line-height: 1.46;
 }
 
 .subtitle {
   max-width: 760px;
-  font-size: clamp(1.1rem, 1.7vw, 1.35rem);
+  font-size: clamp(0.95rem, 1.9vmin, 1.25rem);
 }
 
 .author-line {
@@ -152,7 +156,8 @@ li,
 }
 
 .hero-visual {
-  min-height: 420px;
+  min-height: 0;
+  height: min(48vmin, 420px);
   position: relative;
   border: 1px solid var(--line);
   background: linear-gradient(160deg, #fef9df, #e7f2f7);
@@ -306,7 +311,7 @@ li,
 }
 
 .flow-diagram div {
-  min-height: 112px;
+  min-height: clamp(70px, 13vmin, 112px);
   display: grid;
   place-items: center;
   text-align: center;
@@ -376,7 +381,7 @@ li,
 .controls {
   position: fixed;
   left: 50%;
-  bottom: 1.5rem;
+  bottom: 1rem;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
@@ -390,8 +395,8 @@ li,
 }
 
 button {
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   border: 0;
   background: var(--ink);
   color: white;
@@ -428,11 +433,14 @@ button:disabled {
 
 @media (max-width: 860px) {
   .deck {
-    padding-top: 1rem;
+    align-items: start;
   }
 
   .slide {
-    min-height: calc(100vh - 7rem);
+    width: 100vw;
+    height: calc(100vh - 4.5rem);
+    aspect-ratio: auto;
+    overflow: auto;
   }
 
   .title-grid,
@@ -478,6 +486,7 @@ button:disabled {
 @media print {
   body {
     background: white;
+    overflow: visible;
   }
 
   .deck {
